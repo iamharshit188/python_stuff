@@ -39,3 +39,37 @@ print(fruits)
 
 print("Count of fruits" , len(fruits)) # gives the count of fruits in the list
 print("Count of fruits" , fruits.count("apple")) # gives the count of fruits in the list
+
+## Tuples in python 
+print("-----Topic: Tuple-----")
+# A tuple is a collection of ordered items, just like a list. But unlike a list, you cannot change the elements once a tuple is created. This unchangeable nature is called immutability
+my_tuple = (1, 2, 3, "hello", True)
+print("Value of my_tuple:", my_tuple)
+print("Type of my_tuple:", type(my_tuple))
+# Tuples use parentheses (), are immutable, can hold mixed types, and may be used as dictionary keys.
+# ACTION: TUPLE ALLOWED
+# - Access by index: Yes
+# - Count values: Yes
+# - Find index: Yes
+# - Slice values: Yes
+# - Re-assign entire Tuple: Yes
+# Operation on tuples
+print(my_tuple[0])  # Accesses the first element (index 0), which is 1
+print(my_tuple[-1])  # Accesses the last element (index -1), which is True
+
+# Counting occurrences of a value in the tuple
+print(my_tuple.count(3))  # Counts how many times 3 appears in the tuple, which is 1
+print(my_tuple.count("hello"))  # Counts how many times "hello" appears, which is 1
+
+# Finding the index of a value in the tuple
+print(my_tuple.index("hello"))  # Finds the index of the first occurrence of "hello", which is 3
+print(my_tuple.index(True))  # Finds the index of the first occurrence of True, which is 4
+
+# Slicing the tuple to get a subset
+print(my_tuple[1:4])  # Slices from index 1 to 3 (exclusive), resulting in (2, 3, 'hello')
+print(my_tuple[:3])  # Slices from the start to index 2 (exclusive), resulting in (1, 2, 3)
+print(my_tuple[::2])  # Slices with step 2, resulting in (1, 3, True)
+
+# Re-assigning the entire tuple (since tuples are immutable, you can't modify elements, but you can replace the whole tuple)
+my_tuple = (4, 5, 6, "new", False)  # Re-assigns my_tuple to a new tuple
+print("Re-assigned tuple:", my_tuple)
