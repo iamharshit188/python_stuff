@@ -1,4 +1,3 @@
-# List in python
 print("----- Topic: Basic Data Structures -----")
 # List
 print("Subtopic: List")
@@ -37,3 +36,6 @@ print(fruits)
 print("-----removed last element from list-----")
 fruits.pop() # removes the last element from the list
 print(fruits)
+
+print("Count of fruits" , len(fruits)) # gives the count of fruits in the list
+print("Count of fruits" , fruits.count("apple")) # gives the count of fruits in the list
