@@ -73,3 +73,21 @@ print(my_tuple[::2])  # Slices with step 2, resulting in (1, 3, True)
 # Re-assigning the entire tuple (since tuples are immutable, you can't modify elements, but you can replace the whole tuple)
 my_tuple = (4, 5, 6, "new", False)  # Re-assigns my_tuple to a new tuple
 print("Re-assigned tuple:", my_tuple)
+
+## Set in python
+print("-----Topic: Set-----")
+# A set is a collection of unique items with no duplicates. It is unordered, meaning items have no specific order. Sets are defined using curly braces {} or the set() function. They are useful for checking if something is in the set, removing duplicates, and doing math-like operations like union or intersection.
+my_set = {1, 2, 3, "hello", True}
+print("Value of my_set:", my_set)
+print("Type of my_set:", type(my_set))
+# Sets use curly braces {}, are mutable (you can add or remove items), do not allow duplicates, and are unordered (no indexing).
+# ACTIONS ALLOWED ON SETS:
+# - Access by index: No (because sets are unordered)
+# - Count values: No (sets don't have duplicates, so counting isn't needed)
+# - Find index: No (sets are unordered)
+# - Slice values: No (sets are unordered)
+# - Re-assign entire Set: Yes (you can replace the whole set)
+# Basic operations on sets
+# Adding an element to a set
+my_set.add(4)  # Adds 4 to the set
+print("After adding 4:", my_set)
