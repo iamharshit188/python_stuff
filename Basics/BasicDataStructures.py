@@ -76,18 +76,53 @@ print("Re-assigned tuple:", my_tuple)
 
 ## Set in python
 print("-----Topic: Set-----")
-# A set is a collection of unique items with no duplicates. It is unordered, meaning items have no specific order. Sets are defined using curly braces {} or the set() function. They are useful for checking if something is in the set, removing duplicates, and doing math-like operations like union or intersection.
-my_set = {1, 2, 3, "hello", True}
+# A set is an unordered collection of unique elements in Python. It automatically removes duplicates and does not support indexing or slicing due to its unordered nature. Sets are mutable, meaning you can add or remove elements, but elements must be immutable (e.g., no lists inside sets). They are defined using curly braces {} or the set() function and are useful for membership testing, eliminating duplicates, and performing mathematical set operations like union, intersection, and difference.
+
+# Example: Creating a set with mixed types (duplicates are ignored)
+my_set = {1, 2, 3, "hello", True, 2}  # Note: 2 is duplicated, but set will have only one
 print("Value of my_set:", my_set)
 print("Type of my_set:", type(my_set))
-# Sets use curly braces {}, are mutable (you can add or remove items), do not allow duplicates, and are unordered (no indexing).
-# ACTIONS ALLOWED ON SETS:
-# - Access by index: No (because sets are unordered)
-# - Count values: No (sets don't have duplicates, so counting isn't needed)
-# - Find index: No (sets are unordered)
-# - Slice values: No (sets are unordered)
-# - Re-assign entire Set: Yes (you can replace the whole set)
-# Basic operations on sets
-# Adding an element to a set
-my_set.add(4)  # Adds 4 to the set
+
+# Sets use curly braces {}, are mutable (add/remove elements), unordered (no indexing), and do not allow duplicates.
+# Allowed actions on sets:
+# - Access by index: No (unordered)
+# - Count values: No (duplicates not allowed)
+# - Find index: No (unordered)
+# - Slice values: No (unordered)
+# - Re-assign entire Set: Yes
+
+# Manipulations and examples:
+# Adding elements
+my_set.add(4)  # Adds 4 if not already present
 print("After adding 4:", my_set)
+
+# Removing elements
+my_set.remove(2)  # Removes 2; raises KeyError if not found
+print("After removing 2:", my_set)
+
+my_set.discard(5)  # Removes 5 if present, no error if not
+print("After discarding 5:", my_set)
+
+# Checking membership
+print("Is 'hello' in my_set?", "hello" in my_set)  # True
+
+# Set operations (uses):
+# Union: Combine elements from two sets
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+print("Union of set_a and set_b:", set_a | set_b)  # {1, 2, 3, 4, 5}
+
+# Intersection: Common elements
+print("Intersection of set_a and set_b:", set_a & set_b)  # {3}
+
+# Difference: Elements in set_a but not in set_b
+print("Difference set_a - set_b:", set_a - set_b)  # {1, 2}
+
+# Uses: Removing duplicates from a list
+my_list = [1, 2, 2, 3, 4, 4, 5]
+unique_set = set(my_list)
+print("Unique elements from list:", unique_set)  # {1, 2, 3, 4, 5}
+
+
+# Dictionary
+print("-----Topic: Dictionary-----")
